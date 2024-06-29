@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* Css Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* variables*/
+
+:root {
+  /* primary colors */
+  --Yellow: hsl(47, 88%, 63%);
+
+  /* Neutral colors */
+
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+
+  /* fonts */
+
+  --font-light: 500;
+  --font-bold: 800;
+}
+
+html {
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(--Yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.card {
+  width: auto;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--White);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.card:hover,
+.card:active, .card:focus {
+  transition: transform 1s ease;
+  transform: scale(120%);
+  cursor: pointer;
+}
+
+.card img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  background-color: var(--Yellow);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+p {
+  font-weight: var(--font-light);
+  margin: 1rem 0;
+}
+
+span {
+  vertical-align: super;
+}
+
+article {
+  text-align: left;
+}
+
+figure {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+figure img,
+figcaption {
+  display: grid;
+  place-content: center;
+}
+
+figure img {
+  width: 15%;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .card {
+    width: calc(25% - 1rem);
+  }
+}
